@@ -19,13 +19,13 @@ const winningMessageTextElement = document.querySelector('[data-winning-message-
 startGame()
 
 rematchButton.addEventListener('click', startGame)
-box.classList.remove(X_CLASS)
-box.classList.remove(CIRCLE_CLASS)
-box.removeEventListener('click', handleClick)
+
 function startGame() {
     circleTurn = false;
     boxElements.forEach(box => {
-
+        box.classList.remove(X_CLASS)
+box.classList.remove(CIRCLE_CLASS)
+box.removeEventListener('click', handleClick)
         box.addEventListener('click', handleClick, { once: true})
     })
     winningMessageElement.classList.remove('show')
